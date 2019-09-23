@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>來猜拳設定</title>
+<style>
+.button {
+  background-color:#ff0000 ; /* Red-#ff0000; Green-#4CAF50 */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+}
+</style>
+</head>
+<center>
+<body bgcolor="#9DDCEB">
+
+<h1>來猜拳設定</h1>
+
+<form action="race.html">
+<table>
+
+<tr>
+<td Width="300">
+記憶數量：<br>
+<input type="radio" name="xonum" value="1">1<br>
+<input type="radio" name="xonum" value="2">2<br>
+<input type="radio" name="xonum" value="3" checked>3<br>
+<input type="radio" name="xonum" value="4">4<br>
+<input type="radio" name="xonum" value="5">5<br>
+<input type="radio" name="xonum" value="6">6<br>
+<input type="radio" name="xonum" value="7">7<br>
+</td>
+<td Width="300">
+答題時間：<br>
+<input type="radio" name="xotime" value="3">3秒<br>
+<input type="radio" name="xotime" value="5" checked>5秒<br>
+<input type="radio" name="xotime" value="7">7秒<br>
+<input type="radio" name="xotime" value="9">9秒<br>
+<input type="radio" name="xotime" value="9">12秒<br>
+</td>
+<td Width="300">
+讀題速度：<br>
+<input type="radio" name="xospeed" value="1.5">很快<br>
+<input type="radio" name="xospeed" value="1.25">快<br>
+<input type="radio" name="xospeed" value="1" checked>正常<br>
+<input type="radio" name="xospeed" value="0.75">慢<br>
+<input type="radio" name="xospeed" value="0.5">很慢<br>
+<input type="radio" name="xospeed" value="0.3">極慢<br>
+</td>
+</tr>
+
+<tr>
+<td></td><td>
+<input type="submit" class="button" value="開始">
+</td>
+</tr>
+<table>
+</form>
+</body>
+</center>
+</html>

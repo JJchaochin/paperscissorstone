@@ -1,0 +1,358 @@
+<!doctype html>
+<!--
+Created using JS Bin
+http://bin.webduino.io
+
+Copyright (c) 2019 by anonymous (http://bin.webduino.io/hezex/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Fenduino on Webduino</title>
+  <script src="https://blocklypro.webduino.io/node_modules/jquery/dist/jquery.min.js?rev=2f6b11a7e914718e0290410e85366fe9"></script>
+  <script src="https://blocklypro.webduino.io/dist/lib/webduino-all-0.4.20.min.js?rev=4426739c00d85325cb2d3d701fa50666"></script>
+  <script src="https://blocklypro.webduino.io/dist/webduino-blockly.min.js?rev=736fa9a2fba9fa461db7c329f6651493"></script>
+  <script src="https://blocklypro.webduino.io/dist/lib/firebase.min.js?rev=c0bfd493efd477d098a4ae9e92b13880"></script>
+  <script src="https://blocklypro.webduino.io/dist/lib/runtime.min.js?rev=683a69503433786202911b4d9f766100"></script>
+<style id="jsbin-css">
+#showcontent { font-size: 60px; pointer-events: auto!important; }
+</style>
+
+  <!-- Site made with Mobirise Website Builder v4.10.7, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.10.7, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets1/images/080701small-128x129.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  <title>剪刀石頭布</title>
+  <link rel="stylesheet" href="assets1/tether/tether.min.css">
+  <link rel="stylesheet" href="assets1/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets1/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets1/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets1/soundcloud-plugin/style.css">
+  <link rel="stylesheet" href="assets1/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets1/theme/css/style.css">
+  <link rel="stylesheet" href="assets1/mobirise/css/mbr-additional.css" type="text/css">
+
+
+</head>
+
+<body>
+  <!--<div><span id="showcontent">剪刀石頭布之記憶力</span></div>-->
+  
+<audio id="saywin">
+    <source src="sound/win.mp3" type="audio/mpeg">
+</audio>  
+<audio id="saylose">
+    <source src="sound/lose.mp3" type="audio/mpeg">
+</audio>  
+
+<section class="team1 cid-rC7Lrwjm2o" id="team1-1">
+    
+    
+    
+    <div class="container align-center">
+        <h2 class="pb-3 mbr-fonts-style mbr-section-title display-2">剪刀石頭布之<br>記憶力比賽</h2>
+        <h3 class="pb-5 mbr-section-subtitle mbr-fonts-style mbr-light display-5">老馬實作</h3>
+        <div class="row media-row">
+            
+        <div class="team-item col-lg-3 col-md-6">
+                <div class="item-image">
+                   
+                </div>
+                <div class="item-caption py-3">
+                    <div class="item-name px-2">
+                        <p style="font-size:40px;" class="mbr-fonts-style display-5">
+                           已答題數</p>
+                    </div>
+                    <div class="item-role px-2">
+                        <p style="font-size:80px;" id="allans">0</p>
+                    </div>
+                    
+                </div>
+            </div><div class="team-item col-lg-3 col-md-6">
+                <div class="item-image">
+                    
+                </div>
+                <div class="item-caption py-3">
+                    <div class="item-name px-2">
+                        <p style="font-size:40px;" class="mbr-fonts-style display-5">
+                           贏的題數</p>
+                    </div>
+                    <div class="item-role px-2">
+                        <p style="font-size:80px;" id="won">0</p>
+                    </div>
+                    
+                </div>
+            </div><div class="team-item col-lg-3 col-md-6">
+                <div class="item-image">
+                    
+                </div>
+                <div class="item-caption py-3">
+                    <div class="item-name px-2">
+                        <p style="font-size:40px;" class="mbr-fonts-style display-5">
+                           勝率</p>
+                    </div>
+                    <div class="item-role px-2">
+                        <p style="font-size:80px;"id="winrate">0<span style="font-size:20px;" id="percent">%</span></p>
+                    </div>
+                    
+                </div>
+            </div></div>    
+    </div>
+</section>
+
+<section class="engine"><a href="https://mobirise.info/b">create your own site</a></section><section class="services4 cid-rC7UDKkHHx" xmlns="http://www.w3.org/1999/html" id="services4-2">
+    <!---->
+    
+    <!---->
+    <!--Overlay-->
+    
+    <!--Container-->
+    <div class="container">
+        <div class="row">
+            <!--Card-1-->
+            <div class="card p-3 col-12">
+                <div class="card-wrapper media-container-row media-container-row">
+                    <div class="card-box">
+                        <div class="row">
+                            <div class="col-12 col-md-12 col-lg-4">
+                                <div class="wrapper">
+                                    <!--Image-->
+                                    <div class="mbr-figure" style="width: 50%;">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-7 col-lg-4">
+                                <div class="wrapper col-left">
+                                    <!--Title-->
+                                    
+                                    <!--Subtitle-->
+                                    
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-5 col-lg-4">
+                                
+                                    <!--Cost-->
+                                    
+                                    <!--Btn-->
+                                    <div class="mbr-section-btn col-right align-center">
+                                        <a href="pssmain.html" class="btn btn-warning-outline m-0 display-4">
+                                            回主選單
+                                        </a>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Card-2-->
+            
+            <!--Card-3-->
+            
+        </div>
+    </div>
+</section>
+
+
+  <script src="assets1/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets1/popper/popper.min.js"></script>
+  <script src="assets1/tether/tether.min.js"></script>
+  <script src="assets1/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets1/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets1/theme/js/script.js"></script>
+  
+  
+  
+  
+  
+  
+  
+<script id="jsbin-javascript">
+(async function () {
+
+//var numx;
+var rightwrong;
+var scissor;
+var data;
+var stone;
+var questionnum;
+var paper;
+var itemnum;
+var j;
+var i;
+var useranswer;
+var randomnum;
+var answerindex;
+var speakitems;
+var answertime;
+var speed;
+var allans;
+var won;
+var temp;
+
+function setupvar() {
+  //numx = ['第一題','第二題','第三題','第四題','第五題'].join('');
+  data = ['剪刀', '石頭', '布'];
+  questionnum = 3;
+  itemnum = 3;
+  randomnum = [];
+  speakitems = '';
+  answertime = 5;
+  speed=1;
+  allans=1;
+  won=0;
+  temp=0;
+}
+
+async function showresult() {
+  rightwrong = false;
+  if (useranswer.length == randomnum.length) {
+    rightwrong = true;
+    var j_end = useranswer.length;
+    var j_inc = 1;
+    if (1 > j_end) {
+      j_inc = -j_inc;
+    }
+    for (j = 1;
+         j_inc >= 0 ? j <= j_end : j >= j_end;
+         j += j_inc) {
+      if (useranswer[j - 1] != randomnum[j - 1]) {
+        rightwrong = false;
+      }
+    }
+  }
+  if (rightwrong) {
+    document.getElementById("saywin").play(); 
+    won=won+1;
+    document.getElementById('won').textContent =won.toString();
+	temp=parseFloat(((won/allans)*100).toFixed(1));
+	document.getElementById('winrate').innerHTML=temp.toString()+"<span style='font-size:20px;' id='percent'>%</span>";
+	
+  } else {
+   document.getElementById("saylose").play(); 
+   temp=parseFloat(((won/allans)*100).toFixed(1));
+   document.getElementById('winrate').innerHTML=temp.toString()+"<span style='font-size:20px;' id='percent'>%</span>";
+   
+  }
+  await delay(2);
+  randomnum = [];
+  useranswer = [];
+  answerindex = 1;
+  speakitems = '';
+  speak('下一題');
+  await delay(2);
+}
+
+function math_random_int(a, b) {
+  if (a > b) {
+    // Swap a and b to ensure a is smaller.
+    var c = a;
+    a = b;
+    b = c;
+  }
+  return Math.floor(Math.random() * (b - a + 1) + a);
+}
+
+async function showitems() {
+  //get the parameter if needed
+  var strUrl = location.search;
+  var getPara, ParaVal;
+  var aryPara = [];
+
+  if (strUrl.indexOf("?") != -1) {
+    var getSearch = strUrl.split("?");
+    getPara = getSearch[1].split("&");
+    for (i = 0; i < getPara.length; i++) {
+      ParaVal = getPara[i].split("=");
+      aryPara.push(ParaVal[0]);
+	  aryPara.push(ParaVal[1]);
+    }
+	
+    itemnum=parseInt(aryPara[1]);
+	answertime=parseInt(aryPara[3]);
+	speed=parseFloat(aryPara[5]);
+	//念太慢，拖掉了時間，補回時間
+	if(speed<1){
+	answertime=answertime/speed;
+	}
+	//alert(speed);
+  }
+
+
+
+
+
+  speak('開始出題', ["zh-TW",1,1,0.7]);
+  await delay(2);
+  document.getElementById("allans").textContent=allans.toString();
+  while (true) {
+    var i_inc = 1;
+    if (1 > itemnum) {
+      i_inc = -i_inc;
+    }
+    for (i = 1;
+         i_inc >= 0 ? i <= itemnum : i >= itemnum;
+         i += i_inc) {
+      randomnum[i - 1] = math_random_int(1, data.length);
+    }
+    var i_inc2 = 1;
+    if (1 > itemnum) {
+      i_inc2 = -i_inc2;
+    }
+    for (i = 1;
+         i_inc2 >= 0 ? i <= itemnum : i >= itemnum;
+         i += i_inc2) {
+      speakitems = String(speakitems) + String(data[randomnum[i - 1] - 1]);
+    }
+    await delay(1);
+    <!--document.getElementById('showcontent').innerHTML = speakitems;-->
+    speak(speakitems,["zh-TW",1,1,speed], async function () {
+
+    },0);
+    await delay(answertime);
+    <!--document.getElementById('showcontent').innerHTML = '時間到';-->
+    await delay(1);
+    await showresult();
+	allans=allans+1;
+	document.getElementById("allans").textContent=allans.toString();
+  }
+}
+
+
+boardReady({board: 'Smart', device: '10yRgYBV', transport: 'mqtt'}, async function (board) {
+  board.samplingInterval = 50;
+  setupvar();
+  scissor = getButton(board, 2);
+  stone = getButton(board, 5);
+  paper = getButton(board, 14);
+  useranswer = [];
+  answerindex = 1;
+  scissor.on('pressed', async function () {
+    useranswer[answerindex - 1] = 1;
+    answerindex = answerindex + 1;
+  });
+  stone.on('pressed', async function () {
+    useranswer[answerindex - 1] = 2;
+    answerindex = answerindex + 1;
+  });
+  paper.on('pressed', async function () {
+    useranswer[answerindex - 1] = 3;
+    answerindex = answerindex + 1;
+  });
+  showitems();
+});
+
+}());
+</script>
+</body>
+</html>
