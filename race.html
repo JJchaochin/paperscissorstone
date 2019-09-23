@@ -148,11 +148,11 @@ var speed;
 var allans;
 var won;
 var devicecode;
+var boardname;
+var boardinfo;
 
 function setupvar() {
-  <!--numx = ['第一題','第二題','第三題','第四題','第五題'].join('');-->
   data = ['剪刀', '石頭', '布'];
-  // questionnum = 3;
   itemnum = 2;
   randomnum = [];
   speakitems = '';
@@ -161,6 +161,8 @@ function setupvar() {
   allans=1;
   won=0;
   devicecode='';
+  boardname='';
+  boardinfo='';
 }
 
 async function showresult() {
@@ -229,13 +231,19 @@ async function showitems() {
 	  aryPara.push(ParaVal[1]);
     }
 	
-	devicecode=aryPara[1];
-    itemnum=parseInt(aryPara[3]);
-	answertime=parseInt(aryPara[5]);
-	speed=parseFloat(aryPara[7]);
-	//念太慢，拖掉了時間，補回時間
+	boardname=aryPara[1];// smart, fly , 馬克1號
+	devicecode=aryPara[3]; //device id
+    itemnum=parseInt(aryPara[5]); //剪刀石頭布的數量
+	answertime=parseInt(aryPara[7]); //答題秒數
+	speed=parseFloat(aryPara[9]); // 念題速度
+		//念太慢，拖掉了時間，補回時間
 	if(speed<1){
 	answertime=answertime/speed;
+	}
+	if(boardname=='smart'){
+		boardinfo={board: 'Smart', device: devicecode, transport: 'mqtt'};
+	}else{
+		boardinfo={device: devicecode};
 	}
 	//alert(itemnum);
   }
