@@ -132,28 +132,27 @@ Released under the MIT license: http://jsbin.mit-license.org
 <script id="jsbin-javascript">
 (async function () {
 
-//var numx;
-var rightwrong;
-var scissor;
-var data;
-var stone;
-var questionnum;
-var paper;
-var itemnum;
+var rightwrong;//判斷答題對或錯
+var scissor;//偵測按鈕腳2，代表剪刀
+var data;//儲存['剪刀', '石頭', '布']
+var stone;//偵測按鈕腳5，代表石頭
+var paper;//偵測按鈕腳14，代表布
+var itemnum;//剪刀石頭布出題的數量
 var j;
 var i;
-var useranswer;
-var randomnum;
-var answerindex;
-var speakitems;
-var answertime;
-var speed;
-var allans;
-var won;
+var useranswer;//答題串列
+var randomnum;//亂數出題串列
+var answerindex;//依序儲存輸入資料
+var speakitems;//randomnum陣列轉成字串，語音朗讀才會順
+var answertime;//答題時間
+var speed;//語音朗讀速度
+var allans;//總答題數
+var won;//答對題數
 var temp;
-var devicecode;
-var boardname;
-var boardinfo;
+var devicecode;//開發板的device id
+var boardname;//開發板名稱，p.s.似乎沒有影響
+var boardinfo;//字典資料，送入boardRead()的參數
+var nextitem;//要不要念下一題
 
 function setupvar() {
   data = ['剪刀', '石頭', '布'];
@@ -161,13 +160,15 @@ function setupvar() {
   randomnum = [];
   speakitems = '';
   answertime = 5;
-  speed=1;
+  speed=1;//1代表正常速度，值越大念越快，值越小念越慢
   allans=1;
   won=0;
   temp=0;
   devicecode='';
   boardname='';
   boardinfo='';
+  nextitem=1;//0代表不念下一題
+  
 }
 
 async function showresult() {
@@ -205,8 +206,10 @@ async function showresult() {
   useranswer = [];
   answerindex = 1;
   speakitems = '';
-  speak('下一題');
-  await delay(2);
+  if(nextitem){
+	  speak('下一題');
+	  await delay(2);
+  }
 }
 
 function math_random_int(a, b) {
@@ -228,6 +231,9 @@ async function showitems() {
   if (strUrl.indexOf("?") != -1) {
     var getSearch = strUrl.split("?");
     getPara = getSearch[1].split("&");
+	
+	if(getPara.length==6){nextitem=0;}//第6組參數是要不要念下一題
+	
     for (i = 0; i < getPara.length; i++) {
       ParaVal = getPara[i].split("=");
       aryPara.push(ParaVal[0]);
