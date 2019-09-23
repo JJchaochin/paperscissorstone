@@ -195,11 +195,12 @@ var answertime;
 var speed;
 var allans;
 var won;
+var devicecode;
 
 function setupvar() {
   <!--numx = ['第一題','第二題','第三題','第四題','第五題'].join('');-->
   data = ['剪刀', '石頭', '布'];
-  questionnum = 3;
+  // questionnum = 3;
   itemnum = 2;
   randomnum = [];
   speakitems = '';
@@ -207,6 +208,7 @@ function setupvar() {
   speed=1;
   allans=1;
   won=0;
+  devicecode='';
 }
 
 async function showresult() {
@@ -275,9 +277,10 @@ async function showitems() {
 	  aryPara.push(ParaVal[1]);
     }
 	
-    itemnum=parseInt(aryPara[1]);
-	answertime=parseInt(aryPara[3]);
-    speed=parseFloat(aryPara[5]);
+	devicecode=aryPara[1];
+    itemnum=parseInt(aryPara[3]);
+	answertime=parseInt(aryPara[5]);
+	speed=parseFloat(aryPara[7]);
 	//念太慢，拖掉了時間，補回時間
 	if(speed<1){
 	answertime=answertime/speed;
@@ -323,10 +326,12 @@ async function showitems() {
   }
 }
 
+setupvar();
+showitems();
 
 boardReady({board: 'Smart', device: '10yRgYBV', transport: 'mqtt'}, async function (board) {
   board.samplingInterval = 50;
-  setupvar();
+  
   scissor = getButton(board, 2);
   stone = getButton(board, 5);
   paper = getButton(board, 14);
@@ -344,7 +349,7 @@ boardReady({board: 'Smart', device: '10yRgYBV', transport: 'mqtt'}, async functi
     useranswer[answerindex - 1] = 3;
     answerindex = answerindex + 1;
   });
-  showitems();
+  
 });
 
 }());
