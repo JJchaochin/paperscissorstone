@@ -1,2 +1,0 @@
-{board: 'Smart', device: '10yRgYBV', transport: 'mqtt'}
-{device: '10yRgYBV'}
